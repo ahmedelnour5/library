@@ -49,3 +49,50 @@ body {
     font-weight: 700;
     background-color: none;
 }
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 33%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    transform: translate(50%,50%) scale(1);
+    border-radius: 1rem;
+    padding: 1rem;
+    visibility: hidden;
+  
+}
+
+
+.add-book-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-section {
+    margin-bottom: 1rem;
+    width: 100%;
+  
+}
+
+.add-book-form input {
+    width: 60%;
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+.submit-button {
+    width: 60%;
+    padding: 10px; 
+    border-radius: 5px;
+    background-color: #9fff9c;
+}
+
+.form-title {
+    margin-bottom: 1rem;
+}

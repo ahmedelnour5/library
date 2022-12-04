@@ -8,15 +8,43 @@
     <link href="/styles.css" rel="stylesheet">
 </head>
 <body>
+    <!--Begin header-->
     <header class="main-header">
         <div class="headerContainer">
             <h1 class="title">Library</h1>
             <button class="logIn">log-in</button>
         </div>
     </header>
+    <!--End Header-->
+    <!-- Begin Main-->
     <main class="main">
         <button class="add">+ Add Book</button>
+        <!--modal-->
+        <div class="modal">
+            <div class="modal-content">
+                <!--Begin form-->
+                <form class="add-book-form" action="/" class="addBookInfo">
+                    <h3 class="form-title">Add Book</h3>
+                    <div class="form-section">
+                    <input type="text" id="title" name="book_title" placeholder="Title">
+                    </div>
+                    <div class="form-section">
+                    <input type="text" id="author" name="book_author" placeholder="Author">
+                    </div>
+                    <div class="form-section">
+                    <input type="text" id="pages" name="book_pages" placeholder="Pages">
+                    </div>
+                    <button class="submit-button">Submit</button>
+                </form>
+                <!--End form-->
+            </div>
+            <div class="booksGrid" id="shelf">
+                
+            </div>
+        </div>
+         <!--end modal-->
     </main>
-    <div class="booksGrid" id="shelf"></div>
+    <!--End Main-->
+    
 </body>
 </html>
