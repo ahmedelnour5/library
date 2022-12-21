@@ -53,18 +53,32 @@ body {
 .modal {
     position: fixed;
     z-index: 1;
-    left: 33%;
+    left: 50%;
     top: 50%;
     width: 300px;
     height: 300px;
     background-color: #fff;
     transform: translate(50%,50%) scale(1);
+    transition: 0.2s ease-in-out;
     border-radius: 1rem;
     padding: 1rem;
     visibility: hidden;
   
 }
 
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%,-50%)scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  
+}
 
 .add-book-form {
     display: flex;
@@ -95,4 +109,12 @@ body {
 
 .form-title {
     margin-bottom: 1rem;
+}
+
+.booksGrid {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: auto/1fr 1fr 1fr;
+   
 }
