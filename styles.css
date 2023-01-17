@@ -1,120 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
-*,*::before,*::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
+/*body style*/
 body {
-    font-size: 1.5rem;
-    font-family: 'Open Sans',sans-serif;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-   
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  background-color: #f4f4f4;
 }
 
 .main-header {
-   background-color: #fff;
-   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .headerContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logIn {
-    border-radius: 10px 15px;
-    padding: 8px;
-    font-family: inherit;
-    font-size: 24px;
-    font-weight: 700;
-    background-color: none;
+  border-radius: 10px 15px;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: none;
 }
 
 .main {
-    margin: 20px auto;
-    text-align: center;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
 }
 
 .add {
-    border-radius: 10px 15px;
-    padding: 8px;
-    font-family: inherit;
-    font-size: 24px;
-    font-weight: 700;
-    background-color: none;
+  border-radius: 10px 15px;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: none;
+  margin-bottom: 1.5rem;
 }
 
 .modal {
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    width: 300px;
-    height: 300px;
-    background-color: #fff;
-    transform: translate(50%,50%) scale(1);
-    transition: 0.2s ease-in-out;
-    border-radius: 1rem;
-    padding: 1rem;
-    visibility: hidden;
-  
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 350px;
+  background-color: #fff;
+  transform: translate(50%, 50%) scale(1);
+  transition: 0.2s ease-in-out;
+  border-radius: 1rem;
+  padding: 1rem;
+  visibility: hidden;
 }
 
 .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .show-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%,-50%)scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-  
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
 .add-book-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-section {
-    margin-bottom: 1rem;
-    width: 100%;
-  
+  margin-bottom: 1rem;
 }
-
+.read-status {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: bold;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
 .add-book-form input {
-    width: 60%;
-    padding: .5rem;
-    border-radius: 5px;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
 }
 
 .submit-button {
-    width: 60%;
-    padding: 10px; 
-    border-radius: 5px;
-    background-color: #9fff9c;
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #9fff9c;
 }
 
 .form-title {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
+/*style for book grid*/
 .booksGrid {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template: auto/1fr 1fr 1fr;
-   
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/*card style*/
+.card {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-error {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.read-button {
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #9fff9c;
+}
+
+.notRead-button {
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #db5b77;
+}
+.remove-button {
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #eb240a;
 }
